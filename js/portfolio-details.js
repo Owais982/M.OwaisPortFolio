@@ -10,9 +10,9 @@ const portfolioItems = [
     url: "www.example.com",
     mainImage: "/assets/img/portfolio/app-1.jpg",
     thumbnails: [
-      "/assets/img/portfolio/app-1.jpg",
-      "/assets/img/portfolio/app-2.jpg",
-      "/assets/img/portfolio/app-3.jpg",
+      "assets/img/portfolio/app-1.jpg",
+      "assets/img/portfolio/app-2.jpg",
+      "assets/img/portfolio/app-3.jpg",
     ],
     description: `
       <p>A refined web experience shaped for speed and simplicity on larger screens.</p>
@@ -30,8 +30,8 @@ const portfolioItems = [
     url: "www.techcorp.com",
     mainImage: "/assets/img/portfolio/product-1.jpg",
     thumbnails: [
-      "/assets/img/portfolio/product-1.jpg",
-      "/assets/img/portfolio/product-2.jpg",
+      "assets/img/portfolio/product-1.jpg",
+      "assets/img/portfolio/product-2.jpg",
     ],
     description: `
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -46,11 +46,11 @@ const portfolioItems = [
     client: "Brand Studio",
     date: "20 June, 2022",
     url: "www.brandstudio.com",
-    mainImage: "/assets/img/portfolio/branding-1.jpg",
+    mainImage: "assets/img/portfolio/branding-1.jpg",
     thumbnails: [
-      "/assets/img/portfolio/branding-1.jpg",
-      "/assets/img/portfolio/branding-2.jpg",
-      "/assets/img/portfolio/branding-3.jpg",
+      "assets/img/portfolio/branding-1.jpg",
+      "assets/img/portfolio/branding-2.jpg",
+      "assets/img/portfolio/branding-3.jpg",
     ],
     description: `
       <p>Branding is more than just a logo. It's the entire experience your customers have with your company.</p>
@@ -65,10 +65,10 @@ const portfolioItems = [
     client: "Publishing House",
     date: "10 September, 2021",
     url: "www.publishinghouse.com",
-    mainImage: "/assets/img/portfolio/books-1.jpg",
+    mainImage: "assets/img/portfolio/books-1.jpg",
     thumbnails: [
-      "/assets/img/portfolio/books-1.jpg",
-      "/assets/img/portfolio/books-2.jpg",
+      "assets/img/portfolio/books-1.jpg",
+      "assets/img/portfolio/books-2.jpg",
     ],
     description: `
       <p>Book design is an art that combines typography, illustration, and layout to create compelling reading experiences.</p>
@@ -83,10 +83,10 @@ const portfolioItems = [
     client: "Laptop Solutions",
     date: "05 July, 2023",
     url: "www.laptopsolutions.com",
-    mainImage: "/assets/img/portfolio/app-2.jpg",
+    mainImage: "assets/img/portfolio/app-2.jpg",
     thumbnails: [
-      "/assets/img/portfolio/app-2.jpg",
-      "/assets/img/portfolio/app-1.jpg",
+      "assets/img/portfolio/app-2.jpg",
+      "assets/img/portfolio/app-1.jpg",
     ],
     description: `
       <p>A modern web application crafted for clarity, performance, and seamless user interaction.</p>
@@ -101,10 +101,10 @@ const portfolioItems = [
     client: "Innovate Inc",
     date: "30 November, 2022",
     url: "www.innovateinc.com",
-    mainImage: "/assets/img/portfolio/product-2.jpg",
+    mainImage: "assets/img/portfolio/product-2.jpg",
     thumbnails: [
-      "/assets/img/portfolio/product-2.jpg",
-      "/assets/img/portfolio/product-3.jpg",
+      "assets/img/portfolio/product-2.jpg",
+      "assets/img/portfolio/product-3.jpg",
     ],
     description: `
       <p>Product design focusing on ergonomics and user-centered design principles.</p>
@@ -119,10 +119,10 @@ const portfolioItems = [
     client: "Digital Solutions",
     date: "12 January, 2023",
     url: "www.digitalsolutions.com",
-    mainImage: "/assets/img/portfolio/app-3.jpg",
+    mainImage: "assets/img/portfolio/app-3.jpg",
     thumbnails: [
-      "/assets/img/portfolio/app-3.jpg",
-      "/assets/img/portfolio/app-1.jpg",
+      "assets/img/portfolio/app-3.jpg",
+      "assets/img/portfolio/app-1.jpg",
     ],
     description: `
       <p>A comprehensive business application for enterprise management.</p>
@@ -137,10 +137,10 @@ const portfolioItems = [
     client: "Eco Tech",
     date: "18 March, 2023",
     url: "www.ecotech.com",
-    mainImage: "/assets/img/portfolio/product-3.jpg",
+    mainImage: "assets/img/portfolio/product-3.jpg",
     thumbnails: [
-      "/assets/img/portfolio/product-3.jpg",
-      "/assets/img/portfolio/product-1.jpg",
+      "assets/img/portfolio/product-3.jpg",
+      "assets/img/portfolio/product-1.jpg",
     ],
     description: `
       <p>Eco-friendly product design with biodegradable materials.</p>
@@ -155,10 +155,10 @@ const portfolioItems = [
     client: "Urban Cafe",
     date: "05 May, 2022",
     url: "www.urbancafe.com",
-    mainImage: "/assets/img/portfolio/branding-2.jpg",
+    mainImage: "assets/img/portfolio/branding-2.jpg",
     thumbnails: [
-      "/assets/img/portfolio/branding-2.jpg",
-      "/assets/img/portfolio/branding-1.jpg",
+      "assets/img/portfolio/branding-2.jpg",
+      "assets/img/portfolio/branding-1.jpg",
     ],
     description: `
       <p>Complete branding package for a modern urban cafe.</p>
@@ -173,10 +173,10 @@ const portfolioItems = [
     client: "Literary Press",
     date: "22 October, 2022",
     url: "www.literarypress.com",
-    mainImage: "/assets/img/portfolio/books-2.jpg",
+    mainImage: "assets/img/portfolio/books-2.jpg",
     thumbnails: [
-      "/assets/img/portfolio/books-2.jpg",
-      "/assets/img/portfolio/books-1.jpg",
+      "assets/img/portfolio/books-2.jpg",
+      "assets/img/portfolio/books-1.jpg",
     ],
     description: `
       <p>Book series design for a fantasy novel collection.</p>
@@ -191,10 +191,10 @@ const portfolioItems = [
     client: "Tech Startup",
     date: "15 August, 2023",
     url: "www.techstartup.com",
-    mainImage: "/assets/img/portfolio/branding-3.jpg",
+    mainImage: "assets/img/portfolio/branding-3.jpg",
     thumbnails: [
-      "/assets/img/portfolio/branding-3.jpg",
-      "/assets/img/portfolio/branding-2.jpg",
+      "assets/img/portfolio/branding-3.jpg",
+      "assets/img/portfolio/branding-2.jpg",
     ],
     description: `
       <p>Tech startup branding with modern, clean aesthetic.</p>
@@ -209,10 +209,10 @@ const portfolioItems = [
     client: "Academic Publishers",
     date: "30 December, 2022",
     url: "www.academicpublishers.com",
-    mainImage: "/assets/img/portfolio/books-3.jpg",
+    mainImage: "assets/img/portfolio/books-3.jpg",
     thumbnails: [
-      "/assets/img/portfolio/books-3.jpg",
-      "/assets/img/portfolio/books-2.jpg",
+      "assets/img/portfolio/books-3.jpg",
+      "assets/img/portfolio/books-2.jpg",
     ],
     description: `
       <p>Academic textbook design with clear typography and educational illustrations.</p>
