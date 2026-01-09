@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <!-- FAVICON CODE - ADD THIS SECTION -->
+    <!-- Main favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/img/favi-img/favicon.ico"
+    />
+
+    <!-- For modern browsers -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favi-img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favi-img/favicon-16x16.png"
+    />
+
+    <!-- Apple Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      href="assets/img/favi-img/apple-touch-icon.png"
+    />
+
+    <!-- Android Chrome Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/img/favi-img/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/img/favi-img/android-chrome-512x512.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/img/favi-img/site.webmanifest" />
+    <!-- END FAVICON CODE -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/main-style.css" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Add these to your <head> section -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Leaflet CSS for Map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <!-- Leaflet JS for Map -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
+  <body class="main-body">
+    <!-- Main Portfolio Page (Visible by default) -->
+    <section class="main-container" id="main-portfolio-page">
+      <!-- Sidebar -->
+      <div class="navbar">
+        <div class="profile-pic">
+          <img src="./images/profile-pic.jpeg" alt="Muhammad Owais" />
+        </div>
+
+        <div class="my-name">
+          <a id="my-nav-name" href="#home"> <h1>Muhammad Owais</h1></a>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <a href="#home" class="active nav-link" data-page="main">
+                <i class="bi bi-house-door"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link" data-page="main">
+                <i class="bi bi-person"></i>
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="#resume" class="nav-link" data-page="main">
+                <i class="bi bi-file-earmark-text"></i>
+                <span>Resume</span>
+              </a>
+            </li>
+            <li>
+              <a href="#portfolio" class="nav-link" data-page="main">
+                <i class="bi bi-briefcase"></i>
+                <span>Portfolio</span>
+              </a>
+            </li>
+            <li>
+              <a href="#services" class="nav-link" data-page="main">
+                <i class="bi bi-gear"></i>
+                <span>Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-link" data-page="main">
+                <i class="bi bi-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <main class="content-area">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+          <img
+            class="hero-back-img"
+            src="./images/background-img.jpeg"
+            alt="Background"
+          />
+
+          <h2>Muhammad Owais</h2>
+
+          <!-- ADD THIS TYPEWRITER SECTION (NEW LINE BELOW NAME) -->
+          <div class="typewriter-container">
+            <span class="typewriter-prefix">I'm</span>
+            <span class="typewriter-text"></span>
+            <span class="cursor">|</span>
+          </div>
+          <!-- END OF TYPEWRITER SECTION -->
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+          <div class="container">
+            <div class="section-title">
+              <h2>About</h2>
+            </div>
+
+            <div class="about-content">
+              <div class="about-text">
+                <p class="lead">
+                  I embrace challenges as quietly as code embraces logic. Every
+                  line I write carries care, every project a step toward
+                  clarity. I find meaning in solving problems, shaping ideas
+                  into steady, reliable solutions, and growing with each
+                  challenge I meet.
+                </p>
+
+                <div class="profile-summary">
+                  <div class="profile-grid">
+                    <div class="profile-image-container">
+                      <div class="profile-image">
+                        <img
+                          src="./images/profile-pic.jpeg"
+                          alt="Profile Image"
+                        />
+                      </div>
+                    </div>
+                    <div class="profile-info">
+                      <h3>Full Stack Web Developer</h3>
+                      <p class="italic-text">
+                        Turning ideas into structured digital experiences, where
+                        logic and design move in harmony, where structure meets
+                        creativity, and ideas quietly become functional reality.
+                      </p>
+
+                      <div class="profile-details-grid">
+                        <div class="details-column">
+                          <ul class="profile-details">
+                            <li>
+                              <i class="bi bi-chevron-right"></i>
+                              <strong>Birthday:</strong>
+                              <span>09 April 2002</span>
+                            </li>
+                            <li>
+                              <i class="bi bi-chevron-right"></i>
+                              <strong>Website:</strong>
+                              <span style="font-size: 13px"
+                                >http://127.0.0.1:5500/index.html</span
+                              >
+                            </li>
+                            <li>
+                              <i class="bi bi-chevron-right"></i>
+                              <strong>Phone:</strong>
+                              <span>+92 3071212123</span>
+                            </li>
+                            <li>
+                              <i class="bi bi-chevron-right"></i>
+                              <strong>City:</strong>
+                              <span>Kohat, Pakistan</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="details-column">
+                          <ul class="profile-details">
+                            <li>
+                              <i class="bi bi-chevron-right"></i>
+                              <strong>Age:</strong> <span>24</span>
+                            </li>
+                            <li>
+                              <i class="bi bi-chevron-right"></i>
+                              <strong>Degree:</strong> <span>Bachelor</span>
+                            </li>
+                            <li>
+                              <i class="bi bi-chevron-right"></i>
+                              <strong>Email:</strong>
+                              <span style="font-size: 13px"
+                                >owaismuhammad264@gmail.com</span
+                              >
+                            </li>
+                            <li>
+                              <i class="bi bi-chevron-right"></i>
+                              <strong>Freelance:</strong> <span>Available</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <!-- Description paragraph -->
+                      <p class="about-description">
+                        I choose effort over ease, learning through challenge
+                        and growing through responsibility. Every task shapes
+                        me, every struggle refines me, and purpose guides the
+                        work I create.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- STATS SECTION  -->
+                <div class="stats-section-full">
+                  <div class="stats-grid">
+                    <div class="stat-item">
+                      <div class="stat-number">
+                        <span data-count="8" data-suffix="+">0</span>
+                      </div>
+                      <div class="stat-text">
+                        <span class="stat-title">Projects Completed</span>
+                        <span class="stat-description"
+                          >Full-stack & backend projects using PHP, JavaScript,
+                          and React</span
+                        >
+                      </div>
+                    </div>
+                    <div class="stat-item">
+                      <div class="stat-number">
+                        <span data-count="5" data-suffix="+">0</span>
+                      </div>
+                      <div class="stat-text">
+                        <span class="stat-title">Core technologies</span>
+                        <span class="stat-description"
+                          >HTML, CSS, JavaScript, React, PHP
+                        </span>
+                      </div>
+                    </div>
+                    <div class="stat-item">
+                      <div class="stat-number">
+                        <span data-count="5" data-suffix="+">0</span>
+                      </div>
+                      <div class="stat-text">
+                        <span class="stat-title">Certifications & Courses</span>
+                        <span class="stat-description"
+                          >Coursera certifications + continuous learning
+                        </span>
+                      </div>
+                    </div>
+                    <div class="stat-item">
+                      <div class="stat-number">
+                        <span data-count="1">0</span>
+                      </div>
+                      <div class="stat-text">
+                        <span class="stat-title">Live Website in Progress</span>
+                        <span class="stat-description"
+                          >Currently developing and improving a real-world
+                          project</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END OF STATS SECTION -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+          <div class="container">
+            <div class="section-title">
+              <h2>Skills</h2>
+            </div>
+
+            <div class="skills-content">
+              <p class="skills-intro">
+                Skills shaped by curiosity, strengthened through practice, and
+                refined by solving real problems.
+              </p>
+
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span class="skill-name">HTML</span>
+                    <span class="skill-percentage">95%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 95%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span class="skill-name">CSS</span>
+                    <span class="skill-percentage">90%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span class="skill-name">JAVASCRIPT</span>
+                    <span class="skill-percentage">75%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span class="skill-name">PHP</span>
+                    <span class="skill-percentage">65%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 65%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span class="skill-name">React</span>
+                    <span class="skill-percentage">80%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span class="skill-name">MySql</span>
+                    <span class="skill-percentage">55%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 55%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume">
+          <div class="container">
+            <div class="section-title">
+              <h2>Resume</h2>
+            </div>
+
+            <div class="resume-intro">
+              <p>
+                The magazine removes the submitted comedy. Their needs cause
+                certain things to slip away, yet they remain rightly bound by
+                responsibilities.
+              </p>
+            </div>
+
+            <div class="resume-grid">
+              <!-- Left Column -->
+              <div class="resume-column">
+                <!-- Summary -->
+                <div class="resume-card">
+                  <h3 class="resume-card-title">Summary</h3>
+                  <div class="resume-card-content">
+                    <div class="summary-item">
+                      <h4 class="summary-name">MUHAMMAD OWAIS</h4>
+                      <p class="summary-description">
+                        Passionate and detail-oriented web developer with
+                        experience building responsive, user-friendly web
+                        applications. Skilled in front-end development with a
+                        strong foundation in modern web technologies. Committed
+                        to continuous learning and writing clean, efficient, and
+                        scalable code.
+                      </p>
+                      <ul class="summary-contact">
+                        <li>
+                          <i class="bi bi-geo-alt"></i> Kohat KDA, phase 2
+                        </li>
+                        <li><i class="bi bi-phone"></i> (+92) 307-1212123</li>
+                        <li>
+                          <i class="bi bi-envelope"></i>
+                          owaismuhammad264@gmail.com
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Education -->
+                <div class="resume-card">
+                  <h3 class="resume-card-title">Education</h3>
+                  <div class="resume-card-content">
+                    <div class="timeline">
+                      <div class="timeline-item">
+                        <span class="timeline-marker"></span>
+                        <div class="timeline-content">
+                          <h4 class="timeline-title">
+                            BACHELOR'S OF COMPUTER SCIENCE
+                          </h4>
+                          <div class="timeline-year">2021 - 2025</div>
+                          <div class="timeline-subtitle">
+                            Kohat University of Science and Technology
+                          </div>
+                          <p class="timeline-description">
+                            Built a strong foundation in computer science
+                            through coursework, projects, and hands-on learning
+                            in modern technologies.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="timeline-item">
+                        <span class="timeline-marker"></span>
+                        <div class="timeline-content">
+                          <h4 class="timeline-title">
+                            DIPLOMA IN INFORMATION TECHNOLOGY
+                          </h4>
+                          <div class="timeline-year">2020 - 2021</div>
+                          <div class="timeline-subtitle">
+                            Jinnah Institute of Technology, Kohat
+                          </div>
+                          <p class="timeline-description">
+                            Developed practical IT skills with a focus on system
+                            fundamentals, software tools, and technical
+                            problem-solving through hands-on training and
+                            coursework.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column -->
+              <div class="resume-column">
+                <!-- Professional Experience -->
+                <div class="resume-card">
+                  <h3 class="resume-card-title">Professional Experience</h3>
+                  <div class="resume-card-content">
+                    <div class="timeline">
+                      <div class="timeline-item">
+                        <span class="timeline-marker"></span>
+                        <div class="timeline-content">
+                          <h4 class="timeline-title">
+                            SENIOR BACK-END DEVELOPER
+                          </h4>
+                          <div class="timeline-year">2026 - Present</div>
+                          <div class="timeline-subtitle">
+                            RZ Technologies, Kohat
+                          </div>
+                          <ul class="timeline-list">
+                            <li>
+                              Lead the design, development, and deployment of
+                              scalable back-end systems and APIs
+                            </li>
+                            <li>
+                              Delegate tasks to back-end engineers and provide
+                              technical guidance across projects
+                            </li>
+                            <li>
+                              Review code and system architecture to ensure
+                              performance, security, and reliability
+                            </li>
+                            <li>
+                              Oversee efficient use of project resources and
+                              infrastructure within allocated budgets
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="timeline-item">
+                        <span class="timeline-marker"></span>
+                        <div class="timeline-content">
+                          <h4 class="timeline-title">
+                            FRINT-END WEB DEVELOPMENT
+                          </h4>
+                          <div class="timeline-year">Sep 2024 - Nov 2024</div>
+                          <div class="timeline-subtitle">CERD, Peshawar</div>
+                          <ul class="timeline-list">
+                            <li>
+                              Developed responsive and interactive web
+                              interfaces using HTML, CSS, and JavaScript
+                            </li>
+                            <li>
+                              Implemented modern UI components to improve user
+                              experience and accessibility
+                            </li>
+                            <li>
+                              Managed multiple front-end tasks simultaneously
+                              while meeting tight deadlines
+                            </li>
+                            <li>
+                              Collaborated with team members to translate design
+                              requirements into functional web pages
+                            </li>
+                            <li>
+                              Optimized web pages for performance,
+                              responsiveness, and cross-browser compatibility
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+          <div class="container">
+            <div class="section-title">
+              <h2>Portfolio</h2>
+              <p>
+                Great pains bring worthy rewards. His needs are met through
+                effort and persistence. Indeed, he seeks meaning and purpose.
+                Some pursue desire endlessly, yet nothing stands in the way of
+                true fulfillment. There is joy in dedication and commitment,
+                even through challenges.
+              </p>
+            </div>
+
+            <div class="portfolio-content">
+              <!-- Portfolio Filter -->
+              <div class="portfolio-filter">
+                <ul>
+                  <li class="filter-active" data-filter="*">All</li>
+                  <li data-filter=".filter-app">App</li>
+                  <li data-filter=".filter-product">Product</li>
+                  <li data-filter=".filter-branding">Branding</li>
+                  <li data-filter=".filter-books">Books</li>
+                </ul>
+              </div>
+
+              <!-- Portfolio Grid -->
+              <div class="portfolio-grid">
+                <!-- App 1 -->
+                <div
+                  class="portfolio-item filter-app"
+                  data-category="app"
+                  data-project="1"
+                >
+                  <div class="portfolio-img">
+                    <img src="/assets/img/portfolio/app-1.jpg" alt="App 1" />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>App 1</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/app-1.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="App 1"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=1&category=app"
+                          class="portfolio-details-link"
+                          data-category="app"
+                          data-project="1"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div
+                  class="portfolio-item filter-product"
+                  data-category="product"
+                  data-project="1"
+                >
+                  <div class="portfolio-img">
+                    <img
+                      src="/assets/img/portfolio/product-1.jpg"
+                      alt="Product 1"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>Product 1</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/product-1.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="Product 1"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=2&category=product"
+                          class="portfolio-details-link"
+                          data-category="product"
+                          data-project="1"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branding 1 -->
+                <div
+                  class="portfolio-item filter-branding"
+                  data-category="branding"
+                  data-project="1"
+                >
+                  <div class="portfolio-img">
+                    <img
+                      src="/assets/img/portfolio/branding-1.jpg"
+                      alt="Branding 1"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>Branding 1</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/branding-1.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="Branding 1"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=3&category=branding"
+                          class="portfolio-details-link"
+                          data-category="branding"
+                          data-project="1"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Books 1 -->
+                <div
+                  class="portfolio-item filter-books"
+                  data-category="books"
+                  data-project="1"
+                >
+                  <div class="portfolio-img">
+                    <img
+                      src="/assets/img/portfolio/books-1.jpg"
+                      alt="Books 1"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>Books 1</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/books-1.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="Books 1"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=4&category=books"
+                          class="portfolio-details-link"
+                          data-category="books"
+                          data-project="1"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- App 2 -->
+                <div
+                  class="portfolio-item filter-app"
+                  data-category="app"
+                  data-project="2"
+                >
+                  <div class="portfolio-img">
+                    <img src="/assets/img/portfolio/app-2.jpg" alt="App 2" />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>App 2</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/app-2.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="App 2"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=5&category=app"
+                          class="portfolio-details-link"
+                          data-category="app"
+                          data-project="2"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div
+                  class="portfolio-item filter-product"
+                  data-category="product"
+                  data-project="2"
+                >
+                  <div class="portfolio-img">
+                    <img
+                      src="/assets/img/portfolio/product-2.jpg"
+                      alt="Product 2"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>Product 2</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/product-2.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="Product 2"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=6&category=product"
+                          class="portfolio-details-link"
+                          data-category="product"
+                          data-project="2"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branding 2 -->
+                <div
+                  class="portfolio-item filter-branding"
+                  data-category="branding"
+                  data-project="2"
+                >
+                  <div class="portfolio-img">
+                    <img
+                      src="/assets/img/portfolio/branding-2.jpg"
+                      alt="Branding 2"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>Branding 2</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/branding-2.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="Branding 2"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=9&category=branding"
+                          class="portfolio-details-link"
+                          data-category="branding"
+                          data-project="2"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Books 2 -->
+                <div
+                  class="portfolio-item filter-books"
+                  data-category="books"
+                  data-project="2"
+                >
+                  <div class="portfolio-img">
+                    <img
+                      src="/assets/img/portfolio/books-2.jpg"
+                      alt="Books 2"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>Books 2</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/books-2.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="Books 2"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=10&category=books"
+                          class="portfolio-details-link"
+                          data-category="books"
+                          data-project="2"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- App 3 -->
+                <div
+                  class="portfolio-item filter-app"
+                  data-category="app"
+                  data-project="3"
+                >
+                  <div class="portfolio-img">
+                    <img src="/assets/img/portfolio/app-3.jpg" alt="App 3" />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>App 3</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/app-3.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="App 3"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=7&category=app"
+                          class="portfolio-details-link"
+                          data-category="app"
+                          data-project="3"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div
+                  class="portfolio-item filter-product"
+                  data-category="product"
+                  data-project="3"
+                >
+                  <div class="portfolio-img">
+                    <img
+                      src="/assets/img/portfolio/product-3.jpg"
+                      alt="Product 3"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>Product 3</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/product-3.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="Product 3"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=8&category=product"
+                          class="portfolio-details-link"
+                          data-category="product"
+                          data-project="3"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Branding 3 -->
+                <div
+                  class="portfolio-item filter-branding"
+                  data-category="branding"
+                  data-project="3"
+                >
+                  <div class="portfolio-img">
+                    <img
+                      src="/assets/img/portfolio/branding-3.jpg"
+                      alt="Branding 3"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>Branding 3</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/branding-3.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="Branding 3"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=11&category=branding"
+                          class="portfolio-details-link"
+                          data-category="branding"
+                          data-project="3"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Books 3 -->
+                <div
+                  class="portfolio-item filter-books"
+                  data-category="books"
+                  data-project="3"
+                >
+                  <div class="portfolio-img">
+                    <img
+                      src="/assets/img/portfolio/books-3.jpg"
+                      alt="Books 3"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-title">
+                        <h4>Books 3</h4>
+                      </div>
+                      <div class="portfolio-buttons">
+                        <a
+                          href="/assets/img/portfolio/books-3.jpg"
+                          data-gallery="portfolioGallery"
+                          class="portfolio-lightbox"
+                          title="Books 3"
+                          ><i class="bi bi-plus"></i
+                        ></a>
+                        <a
+                          href="portfolio-details.html?id=12&category=books"
+                          class="portfolio-details-link"
+                          data-category="books"
+                          data-project="3"
+                          title="More Details"
+                          ><i class="bi bi-link"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+          <div class="container">
+            <div class="section-title">
+              <h2>Services</h2>
+            </div>
+
+            <div class="services-intro">
+              <p>
+                “Ideas take shape where patience meets curiosity, every line of
+                code a quiet step toward something greater.
+              </p>
+            </div>
+
+            <div class="services-grid">
+              <!-- Service 1 -->
+              <div class="service-item">
+                <div class="service-icon">
+                  <i class="bi bi-dribbble"></i>
+                </div>
+                <div class="service-content">
+                  <h4>Frontend Craft</h4>
+                  <p>
+                    Shaping interfaces that feel natural and clear, where design
+                    responds gently to every screen.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Service 2 -->
+              <div class="service-item">
+                <div class="service-icon">
+                  <i class="bi bi-file-earmark-text"></i>
+                </div>
+                <div class="service-content">
+                  <h4>Backend Logic</h4>
+                  <p>
+                    Quiet systems working behind the scenes, turning intent into
+                    stable, flowing actions.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Service 3 -->
+              <div class="service-item">
+                <div class="service-icon">
+                  <i class="bi bi-speedometer2"></i>
+                </div>
+                <div class="service-content">
+                  <h4>Application Flow</h4>
+                  <p>
+                    From first click to final response, each step connected with
+                    purpose and care.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Service 4 -->
+              <div class="service-item">
+                <div class="service-icon">
+                  <i class="bi bi-globe"></i>
+                </div>
+                <div class="service-content">
+                  <h4>Code Refinement</h4>
+                  <p>
+                    Finding order inside complexity, smoothing rough edges into
+                    readable paths.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Service 5 -->
+              <div class="service-item">
+                <div class="service-icon">
+                  <i class="bi bi-display"></i>
+                </div>
+                <div class="service-content">
+                  <h4>Performance Care</h4>
+                  <p>
+                    Less waiting, more doing, experiences tuned for speed and
+                    calm.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Service 6 -->
+              <div class="service-item">
+                <div class="service-icon">
+                  <i class="bi bi-bank"></i>
+                </div>
+                <div class="service-content">
+                  <h4>Constant Growth</h4>
+                  <p>
+                    Always learning, always refining, letting curiosity guide
+                    better solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+          <div class="container">
+            <div class="section-title">
+              <h2>Testimonials</h2>
+              <p>
+                Thoughts and reflections from projects, mentors, and
+                collaborations that shaped my growth as a developer.
+              </p>
+            </div>
+
+            <div class="testimonials-container">
+              <div class="testimonials-slider swiper">
+                <div class="swiper-wrapper">
+                  <!-- Testimonial 1 -->
+                  <div class="testimonial-item swiper-slide">
+                    <p>
+                      Shows strong attention to detail and structured thinking.
+                      Code is easy to follow and maintain.
+                    </p>
+                    <div class="testimonial-author">
+                      <img
+                        src="assets/img/testimonials/test-1.jpg"
+                        alt="Saul Goodman"
+                      />
+                      <div class="author-info">
+                        <h4>“Project Review</h4>
+                        <span>PHP & HTML Project</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Testimonial 2 -->
+                  <div class="testimonial-item swiper-slide">
+                    <p>
+                      Consistently demonstrates curiosity and persistence.
+                      Approaches problems methodically and learns quickly.
+                    </p>
+                    <div class="testimonial-author">
+                      <img
+                        src="assets/img/testimonials/test-2.jpg"
+                        alt="Sara Wilsson"
+                      />
+                      <div class="author-info">
+                        <h4>Mentor / Instructor</h4>
+                        <span>Coursera / Learning Feedback</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Testimonial 3 -->
+                  <div class="testimonial-item swiper-slide">
+                    <p>
+                      Works well in teams, communicates clearly, and contributes
+                      meaningful solutions.
+                    </p>
+                    <div class="testimonial-author">
+                      <img
+                        src="assets/img/testimonials/test-3.jpg"
+                        alt="Jena Karlis"
+                      />
+                      <div class="author-info">
+                        <h4>Peer Developer</h4>
+                        <span>Collaborative Project</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Testimonial 4 -->
+                  <div class="testimonial-item swiper-slide">
+                    <p>
+                      Focuses on writing code that is not only functional today
+                      but maintainable tomorrow.
+                    </p>
+                    <div class="testimonial-author">
+                      <img
+                        src="assets/img/testimonials/test-4.jpg"
+                        alt="Matt Brandon"
+                      />
+                      <div class="author-info">
+                        <h4>Personal Principle</h4>
+                        <span>Development Philosophy</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Testimonial 5 -->
+                  <div class="testimonial-item swiper-slide">
+                    <p>
+                      Embraces challenges with patience and curiosity, turning
+                      every small obstacle into a stepping stone for better
+                      code.
+                    </p>
+                    <div class="testimonial-author">
+                      <img
+                        src="assets/img/testimonials/test-5.jpg"
+                        alt="John Larson"
+                      />
+                      <div class="author-info">
+                        <h4>Personal Reflection</h4>
+                        <span>Growth & Learning</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pagination dots only (no arrows) -->
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+          <div class="container">
+            <div class="section-title">
+              <h2>Contact</h2>
+              <p>
+                Let’s connect, exchange thoughts, and shape something
+                meaningful.
+              </p>
+            </div>
+
+            <div class="contact-grid">
+              <!-- Contact Form Card -->
+              <div class="contact-form-card">
+                <form id="contactForm" class="contact-form">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                        placeholder="Your Name"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Your Email"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      class="form-control"
+                      placeholder="Subject"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="form-control"
+                      rows="6"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="form-submit">
+                    <button type="submit" class="submit-btn">
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Map & Info Card -->
+              <div class="map-info-card">
+                <!-- Map Container -->
+                <div class="map-container">
+                  <div id="map"></div>
+                  <div class="map-controls">
+                    <button class="map-control-btn" id="mapZoomIn">
+                      <i class="bi bi-plus"></i>
+                    </button>
+                    <button class="map-control-btn" id="mapZoomOut">
+                      <i class="bi bi-dash"></i>
+                    </button>
+                    <button class="map-control-btn" id="mapFullscreen">
+                      <i class="bi bi-arrows-angle-expand"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                  <div class="info-item">
+                    <div class="info-icon">
+                      <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div class="info-content">
+                      <h4>Address</h4>
+                      <p>KDA Kohat, Khyber Pakhtunkhwa, Pakistan</p>
+                    </div>
+                  </div>
+
+                  <div class="info-item">
+                    <div class="info-icon">
+                      <i class="bi bi-phone"></i>
+                    </div>
+                    <div class="info-content">
+                      <h4>Call Us</h4>
+                      <p>+92 307 1212123</p>
+                    </div>
+                  </div>
+
+                  <div class="info-item">
+                    <div class="info-icon">
+                      <i class="bi bi-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                      <h4>Email Us</h4>
+                      <p>owaismuhammad264@gmail.com</p>
+                    </div>
+                  </div>
+
+                  <button id="viewLargerMap" class="view-map-btn">
+                    <i class="bi bi-geo-alt"></i>
+                    View larger map
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ===== Simple Footer ===== -->
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="copyright">
+              © Copyright <strong>Muhammad Owais</strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+              Turning ideas into interactive digital products.
+            </div>
+          </div>
+        </footer>
+      </main>
+      <!-- Back to Top Button -->
+      <button id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+      </button>
+    </section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
