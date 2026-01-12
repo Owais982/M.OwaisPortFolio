@@ -17,7 +17,6 @@ const portfolioItems = [
     description: `
       <p>A refined web experience shaped for speed and simplicity on larger screens.</p>
       <p>Engineered with modern tools to ensure fluid interaction and dependable performance.</p>
-
     `,
   },
   {
@@ -221,7 +220,7 @@ const portfolioItems = [
   },
 ];
 
-// DOM Elements
+// DOM Elements (REMOVED navigation buttons)
 const detailsMainImg = document.getElementById("details-main-img");
 const thumbnailsContainer = document.getElementById("thumbnails-container");
 const infoCategory = document.getElementById("info-category");
@@ -229,14 +228,8 @@ const infoClient = document.getElementById("info-client");
 const infoDate = document.getElementById("info-date");
 const infoUrl = document.getElementById("info-url");
 const detailsProjectTitle = document.getElementById("details-project-title");
-const detailsProjectDescription = document.getElementById(
-  "details-project-description"
-);
-const prevProjectBtn = document.getElementById("prev-project");
-const nextProjectBtn = document.getElementById("next-project");
-const relatedProjectsContainer = document.getElementById(
-  "related-projects-container"
-);
+const detailsProjectDescription = document.getElementById("details-project-description");
+const relatedProjectsContainer = document.getElementById("related-projects-container");
 
 let currentCategoryItems = [];
 let currentIndex = 0;
@@ -280,9 +273,7 @@ function loadPortfolioItem(id) {
   thumbnailsContainer.innerHTML = "";
   currentCategoryItems.forEach((item, index) => {
     const thumb = document.createElement("div");
-    thumb.className = `thumbnail-item ${
-      index === currentIndex ? "active" : ""
-    }`;
+    thumb.className = `thumbnail-item ${index === currentIndex ? "active" : ""}`;
     thumb.innerHTML = `<img src="${item.mainImage}" alt="${item.title}">`;
     thumb.addEventListener("click", () => {
       if (autoSwitchInterval) clearInterval(autoSwitchInterval);
@@ -292,9 +283,7 @@ function loadPortfolioItem(id) {
       updateMainImage(item);
 
       // Update active thumbnail
-      document
-        .querySelectorAll(".thumbnail-item")
-        .forEach((t) => t.classList.remove("active"));
+      document.querySelectorAll(".thumbnail-item").forEach((t) => t.classList.remove("active"));
       thumb.classList.add("active");
 
       // Resume auto-switch after 5s
@@ -310,8 +299,7 @@ function loadPortfolioItem(id) {
     `portfolio-details.html?id=${currentItem.id}&category=${currentItem.category}`
   );
 
-  // Navigation buttons
-  updateNavigationButtons();
+  // REMOVED: Navigation buttons code
 
   // Related projects
   loadRelatedProjects();
@@ -351,30 +339,7 @@ function startAutoImageSwitch() {
   }, 5000);
 }
 
-// Update navigation buttons
-function updateNavigationButtons() {
-  // Check if buttons exist before using them
-  if (!prevProjectBtn || !nextProjectBtn) {
-    console.error('Navigation buttons not found!');
-    return; // Exit function if buttons don't exist
-  }
-  
-  prevProjectBtn.disabled = currentIndex === 0;
-  nextProjectBtn.disabled = currentIndex === currentCategoryItems.length - 1;
-
-  prevProjectBtn.onclick = () => {
-    if (!prevProjectBtn.disabled)
-      loadPortfolioItem(currentCategoryItems[currentIndex - 1].id);
-  };
-  
-  nextProjectBtn.onclick = () => {
-    if (!nextProjectBtn.disabled)
-      loadPortfolioItem(currentCategoryItems[currentIndex + 1].id);
-  };
-
-  prevProjectBtn.style.opacity = prevProjectBtn.disabled ? "0.6" : "1";
-  nextProjectBtn.style.opacity = nextProjectBtn.disabled ? "0.6" : "1";
-}
+// REMOVED: updateNavigationButtons function entirely
 
 // Load related projects (same category)
 function loadRelatedProjects() {
@@ -447,9 +412,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadPortfolioItem(projectId);
 
   window.addEventListener("popstate", () => {
-    const newId =
-      parseInt(new URLSearchParams(window.location.search).get("id")) ||
-      projectId;
+    const newId = parseInt(new URLSearchParams(window.location.search).get("id")) || projectId;
     loadPortfolioItem(newId);
   });
 });
