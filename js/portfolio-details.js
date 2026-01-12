@@ -1,19 +1,4 @@
 // Portfolio Details Data
-// Add after line 1 (or at the beginning)
-console.log('Testing image URLs:');
-console.log('app-1:', 'https://owais982.github.io/M.OwaisPortFolio/assets/img/portfolio/app-1.jpg');
-console.log('product-1:', 'https://owais982.github.io/M.OwaisPortFolio/assets/img/portfolio/product-1.jpg');
-
-// Test if images can be loaded
-const testImage = (url) => {
-  const img = new Image();
-  img.onload = () => console.log(url, '✓ LOADED');
-  img.onerror = () => console.log(url, '✗ FAILED');
-  img.src = url;
-};
-
-testImage('https://owais982.github.io/M.OwaisPortFolio/assets/img/portfolio/app-1.jpg');
-testImage('https://owais982.github.io/M.OwaisPortFolio/assets/img/portfolio/product-1.jpg');
 const portfolioItems = [
   {
     id: 1,
@@ -368,6 +353,12 @@ function startAutoImageSwitch() {
 
 // Update navigation buttons
 function updateNavigationButtons() {
+  // Check if buttons exist before using them
+  if (!prevProjectBtn || !nextProjectBtn) {
+    console.error('Navigation buttons not found!');
+    return; // Exit function if buttons don't exist
+  }
+  
   prevProjectBtn.disabled = currentIndex === 0;
   nextProjectBtn.disabled = currentIndex === currentCategoryItems.length - 1;
 
@@ -375,6 +366,7 @@ function updateNavigationButtons() {
     if (!prevProjectBtn.disabled)
       loadPortfolioItem(currentCategoryItems[currentIndex - 1].id);
   };
+  
   nextProjectBtn.onclick = () => {
     if (!nextProjectBtn.disabled)
       loadPortfolioItem(currentCategoryItems[currentIndex + 1].id);
