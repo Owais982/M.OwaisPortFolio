@@ -8,7 +8,7 @@ const portfolioItems = [
     client: "ASU Company",
     date: "01 March, 2020",
     url: "www.example.com",
-    mainImage: "/assets/img/portfolio/app-1.jpg",
+    mainImage: "assets/img/portfolio/app-1.jpg",
     thumbnails: [
       "assets/img/portfolio/app-1.jpg",
       "assets/img/portfolio/app-2.jpg",
@@ -28,7 +28,7 @@ const portfolioItems = [
     client: "Tech Corp",
     date: "15 April, 2021",
     url: "www.techcorp.com",
-    mainImage: "/assets/img/portfolio/product-1.jpg",
+    mainImage: "assets/img/portfolio/product-1.jpg",
     thumbnails: [
       "assets/img/portfolio/product-1.jpg",
       "assets/img/portfolio/product-2.jpg",
