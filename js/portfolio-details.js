@@ -220,7 +220,7 @@ const portfolioItems = [
   },
 ];
 
-// DOM Elements (REMOVED navigation buttons)
+// DOM Elements - ONLY elements that exist in your HTML
 const detailsMainImg = document.getElementById("details-main-img");
 const thumbnailsContainer = document.getElementById("thumbnails-container");
 const infoCategory = document.getElementById("info-category");
@@ -229,15 +229,22 @@ const infoDate = document.getElementById("info-date");
 const infoUrl = document.getElementById("info-url");
 const detailsProjectTitle = document.getElementById("details-project-title");
 const detailsProjectDescription = document.getElementById("details-project-description");
-const relatedProjectsContainer = document.getElementById("related-projects-container");
+
+// Check if elements exist (debug)
+if (!detailsMainImg) console.error('details-main-img not found in HTML');
+if (!thumbnailsContainer) console.error('thumbnails-container not found in HTML');
+if (!infoCategory) console.error('info-category not found in HTML');
+if (!infoClient) console.error('info-client not found in HTML');
+if (!infoDate) console.error('info-date not found in HTML');
+if (!infoUrl) console.error('info-url not found in HTML');
+if (!detailsProjectTitle) console.error('details-project-title not found in HTML');
+if (!detailsProjectDescription) console.error('details-project-description not found in HTML');
 
 let currentCategoryItems = [];
 let currentIndex = 0;
 let currentItem = null;
 let currentImageIndex = 0;
 let autoSwitchInterval;
-let relatedSwiper = null;
-let isSwiperInitialized = false;
 
 // URL params
 const urlParams = new URLSearchParams(window.location.search);
@@ -257,162 +264,139 @@ function getCategoryName(cat) {
 
 // Load portfolio item
 function loadPortfolioItem(id) {
+  // Filter items by current category
   currentCategoryItems = portfolioItems.filter(
     (item) => item.category === category
   );
+  
+  // Find the item with matching ID
   currentIndex = currentCategoryItems.findIndex((item) => item.id === id);
   if (currentIndex === -1) currentIndex = 0;
 
   currentItem = currentCategoryItems[currentIndex];
-  currentImageIndex = currentIndex; // sync for auto-switch
+  currentImageIndex = currentIndex;
 
   // Set main image and info
   updateMainImage(currentItem);
 
-  // Thumbnails
-  thumbnailsContainer.innerHTML = "";
-  currentCategoryItems.forEach((item, index) => {
-    const thumb = document.createElement("div");
-    thumb.className = `thumbnail-item ${index === currentIndex ? "active" : ""}`;
-    thumb.innerHTML = `<img src="${item.mainImage}" alt="${item.title}">`;
-    thumb.addEventListener("click", () => {
-      if (autoSwitchInterval) clearInterval(autoSwitchInterval);
-
-      currentImageIndex = index;
-      currentItem = item;
-      updateMainImage(item);
-
-      // Update active thumbnail
-      document.querySelectorAll(".thumbnail-item").forEach((t) => t.classList.remove("active"));
-      thumb.classList.add("active");
-
-      // Resume auto-switch after 5s
-      setTimeout(() => startAutoImageSwitch(), 5000);
+  // Create thumbnails
+  if (thumbnailsContainer) {
+    thumbnailsContainer.innerHTML = "";
+    currentCategoryItems.forEach((item, index) => {
+      const thumb = document.createElement("div");
+      thumb.className = `thumbnail-item ${index === currentIndex ? "active" : ""}`;
+      thumb.innerHTML = `<img src="${item.mainImage}" alt="${item.title}">`;
+      
+      thumb.addEventListener("click", () => {
+        if (autoSwitchInterval) clearInterval(autoSwitchInterval);
+        currentImageIndex = index;
+        currentItem = item;
+        updateMainImage(item);
+        
+        // Update active thumbnail
+        document.querySelectorAll(".thumbnail-item").forEach((t) => t.classList.remove("active"));
+        thumb.classList.add("active");
+        
+        // Resume auto-switch after 5s
+        setTimeout(() => startAutoImageSwitch(), 5000);
+      });
+      
+      thumbnailsContainer.appendChild(thumb);
     });
-    thumbnailsContainer.appendChild(thumb);
-  });
+  }
 
-  // URL update
+  // Update URL without reloading page
   window.history.pushState(
     {},
     "",
     `portfolio-details.html?id=${currentItem.id}&category=${currentItem.category}`
   );
 
-  // REMOVED: Navigation buttons code
-
-  // Related projects
-  loadRelatedProjects();
-
-  // Start auto-switch
+  // Start auto-switch of images
   startAutoImageSwitch();
 }
 
 // Function to update main image and info
 function updateMainImage(item) {
-  detailsMainImg.src = item.mainImage;
-  detailsMainImg.alt = item.title;
-  infoCategory.textContent = getCategoryName(item.category);
-  infoClient.textContent = item.client;
-  infoDate.textContent = item.date;
-  infoUrl.href = `https://${item.url}`;
-  infoUrl.textContent = item.url;
-  detailsProjectTitle.textContent = item.title;
-  detailsProjectDescription.innerHTML = item.description;
+  if (detailsMainImg) {
+    detailsMainImg.src = item.mainImage;
+    detailsMainImg.alt = item.title;
+  }
+  
+  if (infoCategory) infoCategory.textContent = getCategoryName(item.category);
+  if (infoClient) infoClient.textContent = item.client;
+  if (infoDate) infoDate.textContent = item.date;
+  
+  if (infoUrl) {
+    infoUrl.href = `https://${item.url}`;
+    infoUrl.textContent = item.url;
+  }
+  
+  if (detailsProjectTitle) detailsProjectTitle.textContent = item.title;
+  if (detailsProjectDescription) detailsProjectDescription.innerHTML = item.description;
 }
 
-// Auto-image switch (cycles main images of category)
+// Auto-image switch (cycles through images of same category)
 function startAutoImageSwitch() {
+  // Clear any existing interval
   if (autoSwitchInterval) clearInterval(autoSwitchInterval);
+  
+  // Don't auto-switch if only one item
   if (currentCategoryItems.length <= 1) return;
 
   autoSwitchInterval = setInterval(() => {
+    // Move to next image
     currentImageIndex = (currentImageIndex + 1) % currentCategoryItems.length;
     currentItem = currentCategoryItems[currentImageIndex];
+    
+    // Update display
     updateMainImage(currentItem);
 
-    // Update thumbnails active class
+    // Update active thumbnail
     document.querySelectorAll(".thumbnail-item").forEach((thumb, index) => {
-      if (index === currentImageIndex) thumb.classList.add("active");
-      else thumb.classList.remove("active");
+      if (index === currentImageIndex) {
+        thumb.classList.add("active");
+      } else {
+        thumb.classList.remove("active");
+      }
     });
-  }, 5000);
+  }, 5000); // Switch every 5 seconds
 }
 
-// REMOVED: updateNavigationButtons function entirely
-
-// Load related projects (same category)
-function loadRelatedProjects() {
-  relatedProjectsContainer.innerHTML = "";
-  currentCategoryItems.forEach((item) => {
-    const slide = document.createElement("div");
-    slide.className = "swiper-slide";
-    slide.innerHTML = `<img src="${item.mainImage}" alt="${item.title}">`;
-    slide.addEventListener("click", () => loadPortfolioItem(item.id));
-    relatedProjectsContainer.appendChild(slide);
+// Pause auto-switch when hovering over main image
+if (detailsMainImg) {
+  detailsMainImg.addEventListener("mouseenter", () => {
+    if (autoSwitchInterval) clearInterval(autoSwitchInterval);
   });
-
-  if (!isSwiperInitialized) {
-    initializeSwiper();
-    isSwiperInitialized = true;
-  } else {
-    if (relatedSwiper) relatedSwiper.destroy(true, true);
-    initializeSwiper();
-  }
-}
-
-// Initialize Swiper
-function initializeSwiper() {
-  relatedSwiper = new Swiper(".related-swiper", {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    speed: 800,
-    effect: "slide",
-    grabCursor: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      320: { slidesPerView: 1, spaceBetween: 10 },
-      576: { slidesPerView: 2, spaceBetween: 15 },
-      768: { slidesPerView: 2, spaceBetween: 20 },
-      992: { slidesPerView: 3, spaceBetween: 20 },
-      1200: { slidesPerView: 3, spaceBetween: 30 },
-    },
+  
+  detailsMainImg.addEventListener("mouseleave", () => {
+    startAutoImageSwitch();
   });
 }
 
-// Pause auto-switch on hover
-detailsMainImg.addEventListener("mouseenter", () => {
-  if (autoSwitchInterval) clearInterval(autoSwitchInterval);
-});
-detailsMainImg.addEventListener("mouseleave", () => {
-  startAutoImageSwitch();
-});
-
-// Initialize page
+// Initialize page when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  if (typeof Swiper === "undefined") {
-    console.error("Swiper not loaded");
-    return;
-  }
+  // Load the portfolio item based on URL parameters
   loadPortfolioItem(projectId);
 
+  // Handle browser back/forward buttons
   window.addEventListener("popstate", () => {
     const newId = parseInt(new URLSearchParams(window.location.search).get("id")) || projectId;
     loadPortfolioItem(newId);
   });
+});
+
+// Optional: Add keyboard navigation (left/right arrows)
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") {
+    // Previous item
+    if (currentIndex > 0) {
+      loadPortfolioItem(currentCategoryItems[currentIndex - 1].id);
+    }
+  } else if (e.key === "ArrowRight") {
+    // Next item
+    if (currentIndex < currentCategoryItems.length - 1) {
+      loadPortfolioItem(currentCategoryItems[currentIndex + 1].id);
+    }
+  }
 });
